@@ -1,3 +1,4 @@
+/* #region Base styles */
 *,
 *::before,
 *::after {
@@ -11,40 +12,36 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   display: block;
   max-width: 100%;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
 }
-
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
 .container {
   max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
+/* #endregion Base styles */
 
+/* .section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+} */
 /* #region Header */
 .header-container {
   display: flex;
@@ -156,30 +153,36 @@ body {
 /* #region Main Section */
 .main-section {
   background-color: #2e2f42;
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    image-set(
+      url(../images/people-mobile@1x.jpg) 1x,
+      url(../images/people-mobile@2x.jpg) 2x
+    );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+.main-section .container {
+  display: flex;
+  gap: 72px;
+  flex-direction: column;
+  align-items: center;
+}
 
 .main-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 107%;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #ffffff;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 496px;
-  padding-bottom: 48px;
+  max-width: 216px;
 }
 .button-order-service {
   display: block;
@@ -222,9 +225,8 @@ body {
 }
 
 .features {
-  display: flex;
-
-  margin: 0px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .features-ul {
@@ -234,11 +236,12 @@ body {
   list-style: none;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .features-item {
-  width: 264px;
+  width: 100%;
   text-align: left;
   padding: 0px;
 }
@@ -256,23 +259,20 @@ body {
   justify-content: center;
 }
 .features-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  text-align: left;
-  margin-top: 0;
+  text-align: center;
   margin-bottom: 8px;
 }
 
 .features-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
-  margin-bottom: 0px;
-  margin-top: 0px;
 }
 /* #endregion Features */
 
@@ -281,8 +281,8 @@ body {
   background-color: #f4f4fd;
   color: #2e2f42;
 
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .our-team-title {
@@ -299,8 +299,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .our-team-li {
@@ -851,19 +851,6 @@ body {
   letter-spacing: 0.04em;
 }
 
-/* .input-privacy {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-right: 8px;
-  cursor: pointer;
-} */
-
 .button-send {
   display: block;
   margin-left: auto;
@@ -881,20 +868,15 @@ body {
   border: none;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  border-radius: 4px;
-  padding: 16px 32px;
- 
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  
-  
-  text-align: center;
-  
-  margin: 24px auto; */
 }
 
 /* #endregion Modal */
+
+/* #region MEDIA */
+@media (min-width: 320px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1158px) {
+}
+/* #endregion MEDIA */
