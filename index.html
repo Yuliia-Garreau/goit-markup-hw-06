@@ -27,7 +27,7 @@
   </head>
   <body style="color: #434455">
     <!-- Header -->
-    <!-- <header class="header-container">
+    <header class="header-container">
       <div class="container header-container">
         <nav class="logo-and-menu">
           <a href="./index.html" class="logo"
@@ -49,7 +49,7 @@
         </nav>
 
         <!-- Contacts -->
-    <!-- <address class="address">
+        <address class="address">
           <ul class="address-ul">
             <li class="address-li">
               <a href="mailto:info@devstudio.com" class="address-li"
@@ -64,7 +64,7 @@
           </ul>
         </address>
       </div>
-    </header> -->
+    </header>
 
     <!-- Main -->
     <main>
@@ -139,23 +139,24 @@
       </section> -->
 
       <!-- 3 - Our Team -->
-      <section class="our-team section">
+      <!-- <section class="our-team section">
         <div class="container team">
           <h2 class="our-team-title">Our Team</h2>
           <ul class="our-team-ul">
             <li class="our-team-li">
               <img
-                src="./images/img-3.jpg"
+                class="teammate-img"
+                src="./images/img-1@1x.jpg"
+                srcset="./images/img-1@1x.jpg 1x, ./images/img-1@2x.jpg 2x"
                 alt="Mark Guerrero Photo"
                 width="264"
-                height="260"
               />
               <div class="name-position">
                 <h3 class="our-team-name">Mark Guerrero</h3>
-                <p class="our-team-position">Product Designer</p>
+                <p class="our-team-position">Product Designer</p> -->
 
-                <!-- Social links -->
-                <ul class="social-links-ul">
+      <!-- Social links -->
+      <!-- <ul class="social-links-ul">
                   <li class="social-link-li">
                     <a
                       href="https://www.instagram.com/"
@@ -201,17 +202,18 @@
             </li>
             <li class="our-team-li">
               <img
-                src="./images/img-2.jpg"
+                class="teammate-img"
+                src="./images/img-2@1x.jpg"
+                srcset="./images/img-2@1x.jpg 1x, ./images/img-2@2x.jpg 2x"
                 alt="Tom Ford Photo"
                 width="264"
-                height="260"
-              />
+                              />
               <div class="name-position">
                 <h3 class="our-team-name">Tom Ford</h3>
-                <p class="our-team-position">Frontend Developer</p>
+                <p class="our-team-position">Frontend Developer</p> -->
 
-                <!-- Social links -->
-                <ul class="social-links-ul">
+      <!-- Social links -->
+      <!-- <ul class="social-links-ul">
                   <li class="social-link-li">
                     <a
                       href="https://www.instagram.com/"
@@ -257,17 +259,18 @@
             </li>
             <li class="our-team-li">
               <img
-                src="./images/img-1.jpg"
+                class="teammate-img"
+                src="./images/img-3@1x.jpg"
+                srcset="./images/img-3@1x.jpg 1x, ./images/img-3@2x.jpg 2x"
                 alt="Camila Garcia Photo"
                 width="264"
-                height="260"
-              />
+                              />
               <div class="name-position">
                 <h3 class="our-team-name">Camila Garcia</h3>
-                <p class="our-team-position">Marketing</p>
+                <p class="our-team-position">Marketing</p> -->
 
-                <!-- Social links -->
-                <ul class="social-links-ul">
+      <!-- Social links -->
+      <!-- <ul class="social-links-ul">
                   <li class="social-link-li">
                     <a
                       href="https://www.instagram.com/"
@@ -313,17 +316,19 @@
             </li>
             <li class="our-team-li">
               <img
-                src="./images/img.jpg"
+                class="teammate-img"
+                src="./images/img-4@1x.jpg"
+                srcset="./images/img-4@1x.jpg 1x, ./images/img-4@2x.jpg 2x"
                 alt="Daniel Wilson Photo"
                 width="264"
                 height="260"
               />
               <div class="name-position">
                 <h3 class="our-team-name">Daniel Wilson</h3>
-                <p class="our-team-position">UI Designer</p>
+                <p class="our-team-position">UI Designer</p> -->
 
-                <!-- Social links -->
-                <ul class="social-links-ul">
+      <!-- Social links -->
+      <!-- <ul class="social-links-ul">
                   <li class="social-link-li">
                     <a
                       href="https://www.instagram.com/"
@@ -369,7 +374,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- 4 - Our Portfolio -->
       <!-- <section class="portfolio section">
@@ -378,13 +383,30 @@
           <ul class="portfolio-ul">
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/banking.jpg"
-                  alt="Banking App"
-                  width="360"
-                  height="300"
-                  class="portfolio-overlay-picture"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-desk@1x.jpg 1x,
+                      ./images/portfolio/bank-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-tab@1x.jpg 1x,
+                      ./images/portfolio/bank-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-mob@1x.jpg 1x,
+                      ./images/portfolio/bank-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/banking.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -400,12 +422,30 @@
             </li>
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/cashless.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/cash-desk@1x.jpg 1x,
+                      ./images/portfolio/cash-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/cash-tab@1x.jpg 1x,
+                      ./images/portfolio/cash-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/cash-mob@1x.jpg 1x,
+                      ./images/portfolio/cash-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/cashless.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -420,12 +460,30 @@
             </li>
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/meditation.jpg"
-                  alt="Meditation App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/medit-desk@1x.jpg 1x,
+                      ./images/portfolio/medit-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/medit-tab@1x.jpg 1x,
+                      ./images/portfolio/medit-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/medit-mob@1x.jpg 1x,
+                      ./images/portfolio/medit-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/meditation.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -440,12 +498,30 @@
             </li>
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/taxi.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/taxi-desk@1x.jpg 1x,
+                      ./images/portfolio/taxi-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/taxi-tab@1x.jpg 1x,
+                      ./images/portfolio/taxi-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/taxi-mob@1x.jpg 1x,
+                      ./images/portfolio/taxi-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/taxi.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -460,12 +536,30 @@
             </li>
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/screen.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/screen-desk@1x.jpg 1x,
+                      ./images/portfolio/screen-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/screen-tab@1x.jpg 1x,
+                      ./images/portfolio/screen-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/screen-mob@1x.jpg 1x,
+                      ./images/portfolio/screen-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/screen.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -480,12 +574,30 @@
             </li>
             <li class="portfolio-item-li">
               <div class="portfolio-overlay">
-                <img
-                  src="./images/online.jpg"
-                  alt="Online Courses"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/online-desk@1x.jpg 1x,
+                      ./images/portfolio/online-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/online-tab@1x.jpg 1x,
+                      ./images/portfolio/online-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/online-mob@1x.jpg 1x,
+                      ./images/portfolio/online-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/online.jpg" alt="portfolio picture" />
+                </picture>
 
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -517,8 +629,8 @@
         </div>
 
         <div class="social-link-footer">
-          <p class="social-media-title">Social media</p>
-          <!- Social links Footer -->
+          <p class="social-media-title">Social media</p> -->
+    <!-- Social links Footer -->
     <!-- <ul class="footer-social-links-ul">
             <li class="footer-social-link-li">
               <a href="https://www.instagram.com/" target="_blank" class="link">
