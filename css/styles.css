@@ -29,12 +29,13 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
 }
+
 .container {
-  max-width: 1158px;
-  width: 100%;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px;
 }
 /* #endregion Base styles */
 
@@ -45,7 +46,7 @@ body {
 /* #region Header */
 .header-container {
   display: flex;
-
+  gap: 149px;
   background-color: #ffffff;
   border-bottom: 1px solid #e7e9fc;
   justify-content: space-between;
@@ -976,8 +977,272 @@ body {
 
 /* #region MEDIA */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  /* #region Header */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 149px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7e9fc;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); */
+  }
+  .header-container .container {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+  }
+
+  .burger,
+  .button-close,
+  .header-social-links-ul {
+    display: none;
+  }
+  .header-wrapper {
+    display: flex;
+    padding: 0;
+    position: static;
+    height: auto;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* .burger-icon {
+  }
+  .header-wrapper {
+    display: none;
+    padding: 72px 16px 40px;
+    top: 0;
+    left: 0;
+    
+    
+  }
+  .button-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-close:hover {
+    background-color: #404bbf;
+    border: none;
+  }
+
+  .button-close:focus {
+    background-color: #404bbf;
+    border: none;
+  }
+
+  .icon-header-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #2e2f42;
+  }
+
+  .button-close:hover .icon-header-close {
+    fill: #fff;
+  }
+
+  .button-close:focus .icon-header-close {
+    fill: #fff;
+  } */
+
+  .nav-menu {
+    /* display: flex; */
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu-ul {
+    display: flex;
+    /* gap: 40px; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    gap: 40px;
+  }
+
+  .menu-link {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 111%;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link.active {
+    color: #404bbf;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: #404bbf;
+  }
+
+  .menu-link.active::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #404bbf;
+    transform-origin: bottom left;
+  }
+  .address-ul {
+    gap: 12px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .address-li {
+    display: block;
+    text-align: right;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    letter-spacing: 0.04em;
+    /* color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  }
+  /* #endregion Header */
+  /* #region Main Section */
+  .main-section {
+    /* background-color: #2e2f42;
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 0; */
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      image-set(
+        url(../images/people-tab@1x.jpg) 1x,
+        url(../images/people-tab@2x.jpg) 2x
+      );
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+  }
+  .main-section .container {
+    /* display: flex; */
+    gap: 36px;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+
+  .main-title {
+    /* font-weight: 700; */
+    font-size: 56px;
+    line-height: 1.07;
+    /* letter-spacing: 0.02em; */
+    /* color: #ffffff;
+    text-align: center; */
+    max-width: 496px;
+  }
+  /* .button-order-service {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: #4d5ae5;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-order-service:hover,
+  .button-order-service:focus {
+    background-color: #404bbf;
+  } */
+  /* #endregion Main Section */
+
+  /* #region Features */
+  /* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+  /* .features {
+  padding-top: 96px;
+  padding-bottom: 96px;
+} */
+
+  .features-ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 72px;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-item-icon {
+    display: none;
+  }
+  .features-title {
+    text-align: left;
+  }
 }
-@media (min-width: 1158px) {
+/* #endregion Features */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
+
 /* #endregion MEDIA */
