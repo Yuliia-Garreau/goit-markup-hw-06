@@ -71,7 +71,7 @@ button {
 /* #endregion common */
 
 /* #region Header */
-.header-container {
+header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -291,6 +291,10 @@ button {
   flex-direction: column;
   margin-bottom: auto;
 }
+.mobile-menu-link.first {
+  color: #404bbf;
+}
+
 .mobile-menu-item {
 }
 .mobile-menu-link {
@@ -306,8 +310,7 @@ button {
 .mobile-menu-link:focus {
   color: #404bbf;
 }
-.mobile-menu-address {
-}
+
 .mobile-address-list {
   display: flex;
   align-items: flex-start;
@@ -315,7 +318,8 @@ button {
   gap: 24px;
   margin-bottom: 48px;
 }
-.mobile-address-item {
+.address-link.first {
+  color: #4d5ae5;
 }
 .mobile-address-item:hover,
 .mobile-address-item:focus {
@@ -444,6 +448,8 @@ button {
         url(../images/people-tab@1x.jpg) 1x,
         url(../images/people-tab@2x.jpg) 2x
       );
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
   .main-section .container {
     gap: 36px;
@@ -465,6 +471,8 @@ button {
         url(../images/people-desk@1x.jpg) 1x,
         url(../images/people-desk@2x.jpg) 2x
       );
+    padding-top: 188px;
+    padding-bottom: 188px;
   }
   .main-section .container {
     gap: 48px;
@@ -854,6 +862,7 @@ button {
   letter-spacing: 0.02em;
 
   text-align: left;
+  margin-bottom: 72px;
 }
 
 /* Footer Social links */
@@ -976,6 +985,9 @@ button {
   .footer-logo-text {
     text-align: left;
   }
+  .footer-text {
+    margin-bottom: 0;
+  }
   .social-media-title {
     text-align: left;
   }
@@ -1006,6 +1018,8 @@ button {
     align-items: baseline;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: unset;
   }
   .footer-logo-text {
     width: 264px;
@@ -1019,10 +1033,11 @@ button {
     margin-left: 0;
   }
   .div-logo-social {
-    gap: 0;
+    margin-right: 80px;
   }
   .subscribe-footer {
     display: inline-block;
+    width: 100%;
   }
   .subscribe-input {
     width: 264px;
@@ -1286,6 +1301,8 @@ button {
 @media screen and (min-width: 768px) {
   .modal {
     width: 408px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
